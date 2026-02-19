@@ -11,14 +11,14 @@ Each phase produces artifacts that feed into the next, creating a structured wor
 **Quick setup (skill + dependencies):**
 
 ```bash
-git clone https://github.com/fabianoramos/nvibe.git ~/.claude/skills/nvibe && ~/.claude/skills/nvibe/setup.sh
+git clone https://github.com/ColmeiaSolucoes/nvibe.git ~/.claude/skills/nvibe && ~/.claude/skills/nvibe/setup.sh
 ```
 
 **Manual setup:**
 
 ```bash
 # 1. Install nvibe
-git clone https://github.com/fabianoramos/nvibe.git ~/.claude/skills/nvibe
+git clone https://github.com/ColmeiaSolucoes/nvibe.git ~/.claude/skills/nvibe
 
 # 2. Install brainstorming dependency (used in Phase 1)
 npx @anthropic-ai/skills add https://github.com/obra/superpowers --skill brainstorming

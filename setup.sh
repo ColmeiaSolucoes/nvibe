@@ -10,7 +10,7 @@ echo "Installing nvibe..."
 SKILL_DIR="$HOME/.claude/skills/nvibe"
 if [ ! -f "$SKILL_DIR/SKILL.md" ]; then
   echo "  Cloning nvibe..."
-  git clone https://github.com/fabianoramos/nvibe.git "$SKILL_DIR"
+  git clone https://github.com/ColmeiaSolucoes/nvibe.git "$SKILL_DIR"
 else
   echo "  nvibe already installed, updating..."
   cd "$SKILL_DIR" && git pull
