@@ -8,9 +8,23 @@ Each phase produces artifacts that feed into the next, creating a structured wor
 
 ## Install
 
+**Quick setup (skill + dependencies):**
+
 ```bash
-git clone https://github.com/fabianoramos/nvibe.git ~/.claude/skills/nvibe
+git clone https://github.com/fabianoramos/nvibe.git ~/.claude/skills/nvibe && ~/.claude/skills/nvibe/setup.sh
 ```
+
+**Manual setup:**
+
+```bash
+# 1. Install nvibe
+git clone https://github.com/fabianoramos/nvibe.git ~/.claude/skills/nvibe
+
+# 2. Install brainstorming dependency (used in Phase 1)
+npx @anthropic-ai/skills add https://github.com/obra/superpowers --skill brainstorming
+```
+
+> **Note:** The agents used in Phases 2-3 (codebase-analyzer, web-search-researcher) are built into Claude Code — no extra installation needed.
 
 ## How it works
 
@@ -42,11 +56,18 @@ All artifacts are stored in `.fabs-orch/` at the project root:
 ## Key features
 
 - User approval required before advancing to the next phase
-- Interaction in Portuguese (BR), artifacts in English
 - Codename-based file naming (uppercase with underscores)
 - Real-time task progress tracking
 - Optional competitor research via web search
 - Codebase-aware planning and specs
+
+## Dependencies
+
+| Dependency | Source | Required by |
+|------------|--------|-------------|
+| [brainstorming](https://github.com/obra/superpowers) | obra/superpowers | Phase 1 |
+| codebase-analyzer | Built-in Claude Code agent | Phases 2, 3 |
+| web-search-researcher | Built-in Claude Code agent | Phase 2 (optional) |
 
 ## License
 
