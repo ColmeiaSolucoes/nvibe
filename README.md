@@ -8,20 +8,17 @@ Each phase produces artifacts that feed into the next, creating a structured wor
 
 ## Install
 
-**Quick setup (skill + dependencies):**
+**Via npx (recommended):**
+
+```bash
+npx @anthropic-ai/skills add https://github.com/ColmeiaSolucoes/nvibe --skill nvibe
+npx @anthropic-ai/skills add https://github.com/obra/superpowers --skill brainstorming
+```
+
+**Via git clone:**
 
 ```bash
 git clone https://github.com/ColmeiaSolucoes/nvibe.git ~/.claude/skills/nvibe && ~/.claude/skills/nvibe/setup.sh
-```
-
-**Manual setup:**
-
-```bash
-# 1. Install nvibe
-git clone https://github.com/ColmeiaSolucoes/nvibe.git ~/.claude/skills/nvibe
-
-# 2. Install brainstorming dependency (used in Phase 1)
-npx @anthropic-ai/skills add https://github.com/obra/superpowers --skill brainstorming
 ```
 
 > **Note:** The agents used in Phases 2-3 (codebase-analyzer, web-search-researcher) are built into Claude Code — no extra installation needed.
